@@ -401,13 +401,6 @@ python app.py
 - **Content:** High-quality Wikipedia articles
 - **Purpose:** BERT pretraining with MLM and NSP objectives
 
-**Citation:**
-```
-Merity, S., Xiong, C., Bradbury, J., & Socher, R. (2016).
-Pointer Sentinel Mixture Models.
-arXiv preprint arXiv:1609.07843.
-```
-
 **Preprocessing:**
 - Sentence segmentation using spaCy (en_core_web_sm)
 - Vocabulary building from extracted sentences
