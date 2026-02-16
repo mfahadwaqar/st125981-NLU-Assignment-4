@@ -1,0 +1,17 @@
+# Requirements for Task 4 Web Application
+# Student ID: st125981
+# Assignment 4 - Do you AGREE?
+
+# Core dependencies
+torch>=2.0.0
+numpy>=1.24.0
+
+# Web framework
+gradio>=4.0.0
+
+# Alternative: Flask (if you prefer Flask instead of Gradio)
+# flask>=3.0.0
+# flask-cors>=4.0.0
+
+# Note: If you want to use Flask instead of Gradio,
+# uncomment the Flask lines above and see app_flask.py
