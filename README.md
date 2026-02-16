@@ -387,40 +387,6 @@ cd app
 python app.py
 ```
 
-### File Structure After Training
-### File Structure After Training
-
-```
-st125981-NLU-Assignment-4/
-├── st125981_NLU_Assignment_4.ipynb    # Main notebook with all implementations
-├── app/                                # Task 4: Web Application
-│   ├── app.py                         # Gradio web interface
-│   ├── app_flask.py                   # Flask alternative
-│   ├── templates/
-│   │   └── index.html                 # HTML frontend
-│   └── requirements.txt               # Web app dependencies
-├── ref/                                # Reference notebooks
-│   ├── BERT.ipynb
-│   └── S-BERT.ipynb
-├── README.md                           # Complete documentation
-├── .gitignore                          # Git ignore patterns
-├── bert_scratch.pth                    # BERT model weights (118.9M parameters)
-├── vocab.json                          # Vocabulary (103,620 words)
-├── bert_config.json                    # BERT configuration
-├── sbert_encoder.pth                   # Fine-tuned encoder weights
-└── sbert_classifier.pth                # NLI classifier head weights
-```
-
-### Training Time Estimates
-
-| Task | Subset Mode | Full Dataset |
-|------|-------------|--------------|
-| Task 1: BERT Pretraining | 30-60 min | 4-6 hours |
-| Task 2: Sentence-BERT | 15-30 min | 2-4 hours |
-| Task 3: Evaluation | 5 min | 10 min |
-
-*Times are approximate and depend on hardware (GPU/CPU).*
-
 ---
 
 ## Datasets Used
@@ -470,18 +436,3 @@ Bowman, S. R., Angeli, G., Potts, C., & Manning, C. D. (2015).
 A large annotated corpus for learning natural language inference.
 In Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing (EMNLP).
 ```
-
-**Example Pairs:**
-- **Entailment:** 
-  - Premise: "A soccer game with multiple males playing."
-  - Hypothesis: "Some men are playing a sport."
-  
-- **Neutral:**
-  - Premise: "An older and younger man smiling."
-  - Hypothesis: "Two men are smiling and laughing at the cats playing on the floor."
-  
-- **Contradiction:**
-  - Premise: "A black race car starts up in front of a crowd of people."
-  - Hypothesis: "A man is driving down a lonely road."
-
----
