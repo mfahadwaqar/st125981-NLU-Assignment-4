@@ -1,4 +1,4 @@
-# NLU Assignment 4
+# NLU Assignment 4 - BERT from Scratch, Sentence-BERT Fine-tuning
 
 **Name:** Muhammad Fahad Waqar<br>
 **Student ID:** st125981
