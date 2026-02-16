@@ -1,24 +1,13 @@
-# Assignment 4: Do you AGREE? - NLU Natural Language Inference
+# NLU Assignment 4
 
-**Student ID:** st125981  
-**Course:** AT82.05 Artificial Intelligence: Natural Language Understanding (NLU)  
-**Assignment:** Assignment 4 - Do you AGREE?  
-**Date:** February 15, 2026
+**Name:** Muhammad Fahad Waqar<br>
+**Student ID:** st125981
 
 ---
 
-## Overview
+## Assignment Overview
 
-This repository contains a complete implementation of a Natural Language Inference (NLI) system for the assignment "Do you AGREE?". The project involves building a BERT-based model from scratch and fine-tuning it for the NLI task.
-
-**Assignment Tasks:**
-
-1. **Task 1 (2 pts):** Train BERT from scratch using Masked Language Model (MLM) and Next Sentence Prediction (NSP)
-2. **Task 2 (3 pts):** Fine-tune as Sentence-BERT for NLI classification
-3. **Task 3 (1 pt):** Comprehensive evaluation and analysis
-4. **Task 4 (1 pt):** Interactive web application for NLI predictions
-
-**Total Points:** 7 points
+This assignment implements a BERT model from scratch, fine-tunes it as Sentence-BERT for Natural Language Inference (NLI) classification, evaluates its performance on the SNLI dataset, and develops an interactive web application for NLI predictions.
 
 ---
 
@@ -312,13 +301,6 @@ This repository contains a complete implementation of a Natural Language Inferen
 
 An interactive web application for Natural Language Inference prediction built using Gradio. The application allows users to input a premise and hypothesis, and receive real-time predictions about their logical relationship.
 
-**Features:**
-- Clean, intuitive interface
-- Real-time NLI predictions
-- Confidence scores for all three classes
-- Responsive design
-- Error handling for edge cases
-
 ### 4.2 Application Architecture
 
 **Backend:**
@@ -343,50 +325,22 @@ python app.py
 
 The application will start on `http://127.0.0.1:7861` (or next available port).
 
-**Making Predictions:**
-
-1. Enter a premise sentence in the first text box
-2. Enter a hypothesis sentence in the second text box
-3. Click "Submit" or press Enter
-4. View prediction results with confidence scores
-
-**Example Predictions:**
-
-*Example 1 - Entailment:*
-- **Premise:** "A man is playing a guitar on stage."
-- **Hypothesis:** "The man is performing music."
-- **Expected Result:** High confidence for Entailment
-
-*Example 2 - Neutral:*
-- **Premise:** "A woman is cutting vegetables."
-- **Hypothesis:** "She is making dinner."
-- **Expected Result:** High confidence for Neutral (not enough information)
-
-*Example 3 - Contradiction:*
-- **Premise:** "The sun rises in the east."
-- **Hypothesis:** "The sun rises in the west."
-- **Expected Result:** High confidence for Contradiction
-
 ### 4.4 Application Screenshots
+## **Main Interface**
+![Main Interface](screenshots/main_interface.png)
+*Web application home page showing the premise and hypothesis input fields with the description of NLI task.*
 
-**[INSERT SCREENSHOT 1: Main Interface]**
-*Caption: Web application home page showing the premise and hypothesis input fields with the description of NLI task.*
+## **Prediction Example - Entailment**
+![Prediction Example - Entailment](screenshots/entailment.png)
+*Example showing prediction result for an entailment relationship with confidence scores displayed.*
 
-**[INSERT SCREENSHOT 2: Prediction Example - Entailment]**
-*Caption: Example showing prediction result for an entailment relationship with confidence scores displayed.*
+## **Prediction Example - Neutral**
+![Prediction Example - Neutral](screenshots/neutral.png)
+*Example showing prediction result for a neutral relationship with confidence scores displayed.*
 
-**[INSERT SCREENSHOT 3: Prediction Example - Neutral]**
-*Caption: Example showing prediction result for a neutral relationship with confidence scores displayed.*
-
-**[INSERT SCREENSHOT 4: Prediction Example - Contradiction]**
-*Caption: Example showing prediction result for a contradiction relationship with confidence scores displayed.*
-
-**[INSERT SCREENSHOT 5: Error Handling]**
-*Caption: Application behavior when handling edge cases or empty inputs.*
-
-### 4.5 Alternative Implementation
-
-A Flask-based alternative is also provided in `app_flask.py` with an HTML frontend for users who prefer traditional web frameworks.
+### **Prediction Example - Contradiction**
+![Prediction Example - Contradiction](screenshots/contradiction.png)
+*Example showing prediction result for a contradiction relationship with confidence scores displayed.*
 
 ---
 
@@ -531,225 +485,3 @@ In Proceedings of the 2015 Conference on Empirical Methods in Natural Language P
   - Hypothesis: "A man is driving down a lonely road."
 
 ---
-
-## References
-
-### Academic Papers
-
-1. **BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding**
-   - Devlin, J., Chang, M. W., Lee, K., & Toutanova, K. (2019)
-   - Conference: NAACL
-   - URL: [https://aclanthology.org/N19-1423.pdf](https://aclanthology.org/N19-1423.pdf)
-   - **Relevance:** Foundation for Task 1 - BERT architecture and pretraining objectives
-
-2. **Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks**
-   - Reimers, N., & Gurevych, I. (2019)
-   - Conference: EMNLP
-   - URL: [https://aclanthology.org/D19-1410.pdf](https://aclanthology.org/D19-1410.pdf)
-   - **Relevance:** Foundation for Task 2 - Siamese network architecture and sentence embeddings
-
-3. **A large annotated corpus for learning natural language inference**
-   - Bowman, S. R., Angeli, G., Potts, C., & Manning, C. D. (2015)
-   - Conference: EMNLP
-   - **Relevance:** SNLI dataset used for fine-tuning and evaluation
-
-4. **Pointer Sentinel Mixture Models**
-   - Merity, S., Xiong, C., Bradbury, J., & Socher, R. (2016)
-   - arXiv preprint arXiv:1609.07843
-   - **Relevance:** WikiText-103 dataset for BERT pretraining
-
-5. **Attention Is All You Need**
-   - Vaswani, A., Shazeer, N., Parmar, N., et al. (2017)
-   - Conference: NeurIPS
-   - **Relevance:** Transformer architecture foundation
-
-### Technical Resources
-
-6. **Training Sentence Transformers**
-   - Pinecone Learning Center
-   - URL: [https://www.pinecone.io/learn/series/nlp/train-sentence-transformers-softmax/](https://www.pinecone.io/learn/series/nlp/train-sentence-transformers-softmax/)
-   - **Relevance:** Practical guidance for Sentence-BERT implementation
-
-7. **HuggingFace Transformers Library**
-   - HuggingFace Team
-   - URL: [https://huggingface.co/docs/transformers/](https://huggingface.co/docs/transformers/)
-   - **Relevance:** Reference implementation and best practices
-
-8. **PyTorch Documentation**
-   - PyTorch Team
-   - URL: [https://pytorch.org/docs/](https://pytorch.org/docs/)
-   - **Relevance:** Deep learning framework used for implementation
-
-### Course Materials
-
-9. **Reference Notebooks**
-   - BERT.ipynb - BERT implementation reference
-   - S-BERT.ipynb - Sentence-BERT implementation reference
-   - Provided by course instructors
-
----
-
-## Troubleshooting
-
-### Common Issues and Solutions
-
-**Issue 1: Out of Memory (CUDA/CPU)**
-
-*Symptoms:* RuntimeError: CUDA out of memory / MemoryError
-
-*Solutions:*
-- Reduce batch size (try 16 or 8)
-- Reduce max sequence length
-- Use gradient accumulation
-- Switch to CPU if GPU memory insufficient (slower but works)
-- Close other GPU-intensive applications
-
-**Issue 2: Model files not found when running web app**
-
-*Symptoms:* FileNotFoundError, "Models not loaded" error
-
-*Solutions:*
-- Complete Tasks 1-2 in the notebook first
-- Ensure .pth and .json files exist in root directory
-- Check that app.py can access parent directory
-- Verify file paths in app.py configuration
-
-**Issue 3: spaCy model not found**
-
-*Symptoms:* OSError: [E050] Can't find model 'en_core_web_sm'
-
-*Solutions:*
-```bash
-python -m spacy download en_core_web_sm
-```
-- Ensure spaCy is installed in correct environment
-- Notebook has auto-download cell that handles this
-
-**Issue 4: Slow training**
-
-*Solutions:*
-- Verify GPU is being used (check "Using device: cuda" message)
-- Use subset mode (already default in notebook)
-- Reduce number of epochs
-- Reduce model size (change n_layers to 4)
-
-**Issue 5: Gradio compatibility errors**
-
-*Symptoms:* TypeError about unexpected keyword arguments
-
-*Solutions:*
-- Ensure Gradio 6.0+ is installed
-- Code has been updated for Gradio 6.0 compatibility
-- Remove deprecated parameters (allow_flagging, theme in Interface)
-
-**Issue 6: Poor model performance**
-
-*Expected:* 40-50% accuracy is normal for from-scratch BERT with limited data
-
-*To improve:*
-- Train on full WikiText-103 and full SNLI
-- Increase number of epochs
-- Use official pre-trained BERT weights as starting point
-
----
-
-## Assignment Completion Summary
-
-### Task Completion Checklist
-
-**Task 1: Train BERT from Scratch (2 points)**
-- [x] Implemented complete BERT architecture
-  - [x] Embedding layer (token + position + segment)
-  - [x] Multi-head attention mechanism
-  - [x] Position-wise feed-forward networks
-  - [x] 6 transformer encoder layers
-  - [x] MLM prediction head
-  - [x] NSP prediction head
-- [x] Trained on WikiText-103 dataset
-- [x] Implemented 15% masking strategy
-- [x] Saved model weights, vocabulary, and configuration
-- [x] Documented training progress and results
-
-**Task 2: Fine-tune Sentence-BERT (3 points)**
-- [x] Implemented Sentence-BERT architecture
-  - [x] Loaded pretrained BERT from Task 1
-  - [x] Implemented mean pooling
-  - [x] Implemented concatenation strategy [u, v, |u-v|]
-  - [x] Added classification head
-- [x] Fine-tuned on SNLI dataset
-- [x] Implemented proper training loop with validation
-- [x] Saved fine-tuned encoder and classifier
-- [x] Documented training progress and results
-
-**Task 3: Evaluation and Analysis (1 point)**
-- [x] Generated classification report on SNLI test set
-- [x] Provided performance metrics (precision, recall, F1-score, support)
-- [x] Created confusion matrix
-- [x] Performed error analysis with examples
-- [x] Discussed limitations and challenges
-- [x] Proposed improvements and modifications
-- [x] Compared with baseline and state-of-the-art
-- [x] Documented datasets, hyperparameters, and modifications
-
-**Task 4: Web Application (1 point)**
-- [x] Implemented interactive web application using Gradio
-- [x] Allows user input for premise and hypothesis
-- [x] Returns NLI predictions with confidence scores
-- [x] Clean and intuitive interface
-- [x] Proper error handling
-- [x] Alternative Flask implementation provided
-- [x] Documentation with usage instructions
-
-**Documentation Requirements**
-- [x] Detailed README with all implementation details
-- [x] Dataset information and citations
-- [x] Hyperparameters for all training stages
-- [x] Model architecture specifications
-- [x] Installation and setup instructions
-- [x] Troubleshooting guide
-- [x] References to papers and resources
-
-**Total: 7/7 points**
-
----
-
-## Conclusion
-
-This assignment successfully implements a complete Natural Language Inference system from scratch, demonstrating the entire pipeline from BERT pretraining to deployment. Despite the constraints of training with limited data and computational resources, the model achieves meaningful performance (41% accuracy) that significantly outperforms random baseline (33.3%).
-
-**Key Achievements:**
-- Built BERT from scratch with 118.9M parameters
-- Successfully trained on WikiText-103 with MLM and NSP objectives
-- Fine-tuned as Sentence-BERT for NLI task
-- Achieved 40.50% validation accuracy and 41.00% test accuracy
-- Deployed interactive web application for real-time predictions
-- Comprehensive analysis of model performance and limitations
-
-**Learning Outcomes:**
-- Deep understanding of transformer architecture and self-attention
-- Practical experience with pretraining and fine-tuning strategies
-- Hands-on implementation of siamese networks
-- Experience with NLP evaluation metrics and error analysis
-- Full-stack ML deployment (training to web application)
-
-**Future Work:**
-The proposed improvements in Section 3.7 provide a clear roadmap for achieving state-of-the-art performance, including using more pretraining data, deeper architecture, and advanced training techniques.
-
----
-
-## Contact
-
-**Student ID:** st125981  
-**Course:** AT82.05 Artificial Intelligence: Natural Language Understanding  
-**Assignment:** Assignment 4 - Do you AGREE?  
-**Date:** February 15, 2026
-
----
-
-## Acknowledgments
-
-- Course instructors for reference notebooks and assignment design
-- HuggingFace team for datasets and transformers library
-- PyTorch team for the deep learning framework
-- Pinecone for Sentence-BERT training tutorials
-- Original BERT and Sentence-BERT paper authors

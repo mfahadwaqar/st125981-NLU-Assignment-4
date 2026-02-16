@@ -156,14 +156,12 @@ class BERTEncoder(nn.Module):
 
 
 def mean_pool(token_embeds, attention_mask):
-    """Mean pooling over token embeddings, excluding padding tokens"""
     in_mask = attention_mask.unsqueeze(-1).expand(token_embeds.size()).float()
     pool = torch.sum(token_embeds * in_mask, 1) / torch.clamp(in_mask.sum(1), min=1e-9)
     return pool
 
 
 def configurations(u, v):
-    """Concatenate sentence embeddings: [u, v, |u-v|]"""
     uv = torch.sub(u, v)
     uv_abs = torch.abs(uv)
     x = torch.cat([u, v, uv_abs], dim=-1)
@@ -187,7 +185,7 @@ try:
         classifier_head.load_state_dict(torch.load(classifier_path, map_location=device))
         bert_encoder.eval()
         classifier_head.eval()
-        print("✓ Models loaded successfully!")
+        print("Models loaded successfully!")
         models_loaded = True
     else:
         print("WARNING: Model files not found. Please train the models first.")
@@ -204,7 +202,6 @@ except Exception as e:
 import re
 
 def clean_text(text):
-    """Clean and normalize text"""
     text = text.lower()
     text = re.sub(r'[^a-z0-9\s.,!?;:]', '', text)
     text = re.sub(r'\s+', ' ', text).strip()
@@ -212,7 +209,6 @@ def clean_text(text):
 
 
 def tokenize_text(text, max_length=128):
-    """Tokenize text using vocabulary"""
     cleaned = clean_text(text)
     tokens = [word2id.get(word, word2id.get('[MASK]', 3)) for word in cleaned.split()]
     
@@ -328,9 +324,7 @@ interface = gr.Interface(
 
 # Launch the interface
 if __name__ == "__main__":
-    print("\n" + "="*60)
     print("Starting NLI Web Application...")
-    print("="*60)
     interface.launch(
         share=False,
         server_name="127.0.0.1"
